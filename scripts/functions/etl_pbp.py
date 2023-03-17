@@ -13,7 +13,7 @@ from dotenv import load_dotenv
 
 def create_spark_session():
     # create our spark context to create dataframe based on json parsing 
-    spark = (SparkSession.builder.config("spark.executor.memory", "64g").config("spark.driver.memory", "64g").appName("PySpark processing NBA data").getOrCreate())
+    spark = (SparkSession.builder.appName("PySpark processing NBA data").getOrCreate())
     return spark
 
 
